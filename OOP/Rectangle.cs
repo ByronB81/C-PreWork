@@ -16,6 +16,11 @@ class Rectangle
             return false;
         }
     }
+
+    public int GetArea()
+    {
+     return Length * Width;
+    }
 }
 
 public class Program
@@ -41,5 +46,7 @@ public class Program
         {
             Console.WriteLine("Nay sir, 'tis but a rectangle.");
         }
+
+        Console.WriteLine("The area of your rectangle is " + myRec.GetArea());
     }
 }
