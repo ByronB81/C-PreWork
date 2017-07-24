@@ -6,6 +6,18 @@ class Animal
     public string Name;
     public string Breed;
     public int Age;
+
+    public bool IsACat()
+    {
+        if (Breed.Contains("Cat"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 
 public class Program
@@ -33,7 +45,7 @@ public class Program
 
         foreach (Animal pet in petList)
         {
-            if (pet.Age > 3)
+            if (pet.Age > 3 && !pet.IsACat())
             {
                 Console.WriteLine(pet.Name + " the " + pet.Breed);
             }
