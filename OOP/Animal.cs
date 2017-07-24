@@ -8,6 +8,14 @@ class Animal
     public int Age;
     public bool Adopted;
 
+    public Animal(string petName, string petBreed, int petAge, bool petAdopted = false)
+    {
+        Name = petName;
+        Breed = petBreed;
+        Age = petAge;
+        Adopted = petAdopted;
+    }
+
     public bool IsACat()
     {
         if (Breed.Contains("Cat"))
@@ -37,23 +45,9 @@ public class Program
 {
     public static void Main()
     {
-        Animal pet1 = new Animal();
-        pet1.Name = "Toby";
-        pet1.Breed = "Golden Retriever";
-        pet1.Age = 4;
-        pet1.Adopted = false;
-
-        Animal pet2 = new Animal();
-        pet2.Name = "Boots";
-        pet2.Breed = "Calico Cat";
-        pet2.Age = 6;
-        pet2.Adopted = false;
-
-        Animal pet3 = new Animal();
-        pet3.Name = "Harley";
-        pet3.Breed = "Labrador Retriever";
-        pet3.Age = 2;
-        pet3.Adopted = false;
+        Animal pet1 = new Animal("Toby", "Golden Retriever", 4);
+        Animal pet2 = new Animal("Boots", "Calico Cat", 6);
+        Animal pet3 = new Animal("Harley", "Labrador", 2);
 
         List<Animal> petList = new List<Animal>() {pet1, pet2, pet3};
 
