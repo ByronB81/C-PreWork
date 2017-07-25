@@ -15,7 +15,6 @@ namespace FriendLetter
                 .Build();
 
             host.Run();
-
         }
     }
 }
